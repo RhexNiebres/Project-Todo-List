@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .tab {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+        }
+        .active {
+            background-color: white;
+            border-bottom: 1px solid white;
+        }
+        .task-area {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+        }
+        .current-task-info {
+            margin-bottom: 15px; /* Space below the current task info */
+        }
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h2><span id="viewAllTasksButton" style="cursor:pointer; color: blue;">View All Tasks</span></h2>
+    <h1>Task Manager</h1>
+
+    <div>
+        <h2>Create a Folder</h2>
+        <input type="text" id="folderName" placeholder="Folder Name" required>
+        <button id="addFolderButton">Add Folder</button>
+    </div>
+
+    <div id="tabsContainer"></div>
+    
+    <div id="taskArea" class="task-area">
+        <h2>Tasks for <span id="currentFolderName"></span></h2>
+        
+        <div id="currentTaskInfo" style="display: none;" class="current-task-info"></div> <!-- New section for current task info -->
+        
+        <div>
+            <label>Title:</label>
+            <input type="text" id="taskTitle" required>
+        </div>
+        <div>
+            <label>Description:</label>
+            <input type="text" id="taskDescription" required>
+        </div>
+        <div>
+            <label>Due Date:</label>
+            <input type="date" id="taskDueDate" required>
+        </div>
+        <div>
+            <label>Priority:</label>
+            <select id="taskPriority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+        
+        <button id="addTaskButton">Add Task</button>
+    </div>
+
+    <h2>Task List</h2>
+    <ul id="taskList"></ul>
+
+    <script src="taskManager.js"></script>
+</body>
+</html>
