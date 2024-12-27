@@ -1,145 +1,144 @@
-:root{
-    --main-clr:white;
-    --scnd-clr:#8bf67a;
-    --trd-clr: #a3ffa4; 
+:root {
+  --main-clr: white;
+  --scnd-clr: #8bf67a;
+  --trd-clr: #a3ffa4;
 }
 body {
-    font-family: monospace, sans-serif;
-    display: flex;                     
-    justify-content: center;           
-    align-items: center;               
-    flex-direction: column;            
-    height: 70vh;                     
-    margin: 0;                        
-    background-color: #0A0A0A;     
-    background-color: var(--main-clr);   
+  font-family: monospace, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  margin: 0;
+  background-color: #0a0a0a;
+  background-color: var(--main-clr);
 }
 body h1 {
-    background-color: var(--scnd-clr);
-    padding: 5px;
-    border-radius: 10px;
-    text-align: center;
-    width: 40%;
+  background-color: var(--scnd-clr);
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  width: 40%;
 }
-#viewAllTasksButton{
-    background-color: var(--scnd-clr);
-    padding: 5px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    &:hover{
-        background-color: var(--trd-clr);
-        box-shadow: 0 4px 8px rgba(124, 70, 70, 0.2);
-    }
+#viewAllTasksButton {
+  background-color: var(--scnd-clr);
+  padding: 5px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--trd-clr);
+    box-shadow: 0 4px 8px rgba(124, 70, 70, 0.2);
+  }
 }
 
-h2{
-    background-color: 	var(--scnd-clr);
-    padding: 5px;
-    border-radius: 10px;
-    text-align: center;
+h2 {
+  background-color: var(--scnd-clr);
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
 }
 div.tab {
-    display: inline-block;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    border: 1px solid black; 
-    border-radius: 10px;
-    &:hover{
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 10px;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
 }
-.addTaskButton{
-    background-color: #9cd5ff;
-    border-radius: 10px;
-    padding: 3px;
-    border: none;
-    transition: all 0.3s ease;
-    &:hover{
-        background-color:#c1e5ff; 
-        border: 1px solid black;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+.addTaskButton {
+  background-color: #9cd5ff;
+  border-radius: 10px;
+  padding: 3px;
+  border: none;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #c1e5ff;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }
-.deleteFolderButton{
-    background-color: #ff2020;
-    border-radius: 10px;
-    padding: 3px;
-    border: none;
-    transition: all 0.3s ease;
-    &:hover{
-        background-color: 	#ff5757;
-        border: 1px solid black;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
+.deleteFolderButton {
+  background-color: #ff2020;
+  border-radius: 10px;
+  padding: 3px;
+  border: none;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #ff5757;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }
-.editButton{
-    background-color: #6ab0e3;
-    border: none;
-    border-radius: 10px;
-    &:hover{
-        background-color: #c1e5ff;
-    }
+.editButton {
+  background-color: #6ab0e3;
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    background-color: #c1e5ff;
+  }
 }
-.deleteButton{
-    background-color: var(--scnd-clr);
-    border: none;
-    border-radius: 10px;
-    &:hover{
-        background-color: red;
-    }
+.deleteButton {
+  background-color: var(--scnd-clr);
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    background-color: red;
+  }
 }
 
 .tab:active {
-    background-color: var(--trd-clr);
-    border-bottom: 1px solid white;
+  background-color: var(--trd-clr);
+  border-bottom: 1px solid white;
 }
 
-#addTaskButton{
-    background-color: var(--scnd-clr);
-    :hover{
-        background-color: var(--trd-clr);
-        border: 1px solid black;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-}
-input#folderName{
-    padding: 5px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+#addTaskButton {
+  background-color: var(--scnd-clr);
+  :hover {
+    background-color: var(--trd-clr);
     border: 1px solid black;
-    &:hover{
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }
-button#addFolderButton{
-    background-color: 	var(--scnd-clr);
-    padding: 5px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    border: none;
-    &:hover{
-        background-color: var(--trd-clr);
-        border: 1px solid black;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+input#folderName {
+  padding: 5px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+button#addFolderButton {
+  background-color: var(--scnd-clr);
+  padding: 5px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  &:hover {
+    background-color: var(--trd-clr);
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }
 .task-area {
-    display: none;  
-    margin-top: 2em;
-    margin-bottom: 2em;
-    &div{
-        background-color: var(--scnd-clr);
-        border-radius: 10px;
-    }
+  display: none;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  &div {
+    background-color: var(--scnd-clr);
+    border-radius: 10px;
+  }
 }
 .current-task-info {
-    margin-bottom: 15px;
-    &#taskTitle{
-        border-radius: 10px;
-    }                    
+  margin-bottom: 15px;
+  &#taskTitle {
+    border-radius: 10px;
+  }
 }
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
