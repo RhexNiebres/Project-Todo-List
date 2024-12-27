@@ -1,4 +1,4 @@
-import './styles.css'; 
+import "./styles.css";
 
 class Task {
   constructor(title, description, dueDate, priority) {
@@ -22,7 +22,7 @@ class Folder {
 
 // Load folders from localStorage and ensure they are instances of Folder
 const storedFolders = JSON.parse(localStorage.getItem("folders")) || [];
-const folders = storedFolders.map(folderData => {
+const folders = storedFolders.map((folderData) => {
   const folder = new Folder(folderData.name);
   folder.tasks = folderData.tasks || []; // Ensure tasks are populated if they exist
   return folder;
@@ -52,7 +52,9 @@ document.getElementById("addFolderButton").addEventListener("click", () => {
 });
 
 // View all tasks
-document.getElementById("viewAllTasksButton").addEventListener("click", displayAllTasks);
+document
+  .getElementById("viewAllTasksButton")
+  .addEventListener("click", displayAllTasks);
 
 function displayAllTasks() {
   document.getElementById("taskList").innerHTML = "";
@@ -147,7 +149,7 @@ function showTaskInput() {
 }
 
 // Add Task
-document.getElementById("addTaskButton").addEventListener("click", () => { 
+document.getElementById("addTaskButton").addEventListener("click", () => {
   if (!activeFolder) {
     alert("Please select a folder to add tasks to.");
     return; // Exit if there's no active folder
@@ -188,7 +190,7 @@ document.getElementById("addTaskButton").addEventListener("click", () => {
     document.getElementById("taskTitle").value = "";
     document.getElementById("taskDescription").value = "";
     document.getElementById("taskDueDate").value = "";
-    document.getElementById("taskPriority").value = "Low" //defualt priority
+    document.getElementById("taskPriority").value = "Low"; //defualt priority
 
     document.getElementById("taskArea").style.display = "none"; // Hide task input
     saveFolders();
@@ -282,9 +284,9 @@ function refreshTaskList() {
 }
 
 function saveFolders() {
-  const foldersToSave = folders.map(folder => ({
+  const foldersToSave = folders.map((folder) => ({
     name: folder.name,
-    tasks: folder.tasks // You may want to save tasks more thoroughly depending on your task structure
+    tasks: folder.tasks, // You may want to save tasks more thoroughly depending on your task structure
   }));
   localStorage.setItem("folders", JSON.stringify(foldersToSave)); // Save to localStorage
 }
